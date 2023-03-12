@@ -3,16 +3,15 @@
 namespace example_PRG {
     class Program {
         static void Main(string[] args) {
-            Console.Write("Input your n: ");
-            int n = int.Parse(Console.ReadLine());
-            int a, b=1;
+            Console.Write("Input your number: ");
+            int x = int.Parse(Console.ReadLine());
 
-            for (a=0; a<n; a++)
-            {
-                b=b*2;
+            if (x>=0) {
+                Console.WriteLine(x);
+            } else {
+                x=x*-1;
+                Console.WriteLine(x);
             }
-
-            Console.WriteLine("Sum: {0}", b);
         }
     }
 }
