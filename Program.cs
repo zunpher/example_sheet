@@ -1,15 +1,32 @@
-﻿using System;
+﻿class Program {
+    static void Main(string[] args) {
+        int N = int.Parse(Console.ReadLine());
+        int K = int.Parse(Console.ReadLine());
 
-namespace example_PRG {
-    class Program {
-        static void Main(string[] args) {
-            Console.Write("Please input a number of stations: ");
-            int stations = int.Parse(Console.ReadLine());
-            int cost, add;
+        if ( (N > 1 && N <= 10000) && (1<K && K<=1000)) {
+            for (int i = 0; i < N; i++) {
+                int gender = int.Parse(Console.ReadLine());
+                int score1 = int.Parse(Console.ReadLine());
+                int score2 = int.Parse(Console.ReadLine());
 
-            for (stations=1, add=1; add<=15; add++)
-            {
-                
+                if (gender == 1 && score1 > 8) {
+                    Console.WriteLine("{0} 1", i+1);
+                } else {
+                    if (score1>score2) {
+                        Console.WriteLine("{0} 1", i+1);
+                    } else {
+                        Console.WriteLine("{0} 2", i+1);
+                    }
+                }
+                if (gender == 2 && score2 > 8) {
+                    Console.WriteLine("{0} 2", i+1);
+                } else {
+                    if (score1>score2) {
+                        Console.WriteLine("{0} 1", i+1);
+                    } else {
+                        Console.WriteLine("{0} 2", i+1);
+                    }
+                }
             }
         }
     }
