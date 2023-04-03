@@ -12,9 +12,7 @@
                 if (gender == 1 && score1 > 8) {
                     Console.WriteLine("{0} 1", i+1);
                 } else {
-                    if (score1>score2) {
-                        Console.WriteLine("{0} 1", i+1);
-                    } else {
+                    if (score2>score1) {
                         Console.WriteLine("{0} 2", i+1);
                     }
                 }
@@ -23,8 +21,6 @@
                 } else {
                     if (score1>score2) {
                         Console.WriteLine("{0} 1", i+1);
-                    } else {
-                        Console.WriteLine("{0} 2", i+1);
                     }
                 }
             }
